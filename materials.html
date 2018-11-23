@@ -75,9 +75,35 @@
 </div>
 
 <div class="container">
+    <script type="text/javascript">
+        var scratchGames = [
+            {
+                title: "Hello world1",
+                previewUrl: 'previewUrl1',
+                linkEn: 'linkEn1',
+                linkDe: 'linkDe1',
+                printInstructions: 'printInstructions1'
+            },
+            {
+                title: "Hello world2",
+                previewUrl: 'previewUrl2',
+                linkEn: 'linkEn2',
+                linkDe: 'linkDe2',
+                printInstructions: 'printInstructions2'
+            }
+        ]
+    </script>
+
+    <script src="assets/js/vue.min.js"></script>
+    <script type="text/javascript" src="assets/js/components/material.js"></script>
     <h1><a name="materials"></a>Materials</h1>
     <div>
     <h2><a name="materials-scratch"></a>Scratch</h2>
+        <materials-list
+                title="Scratch"
+                v-bind:papers="scratchGames"
+        >
+        </materials-list>
 
     </div>
 
@@ -92,10 +118,14 @@
     <div>
         <h2><a name="materials-other"></a>Other</h2>
     </div>
+
+
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>/* if jquery not loaded from cdn */window.jQuery || document.write('<script src="assets/js/jquery.min.js">\x3C/script>')</script>
 <script src="assets/js/bootstrap.min.js"></script>
+<!--<script src="assets/js/vue.min.js"></script>-->
+<!--<script type="text/javascript" src="assets/js/components/material.js"></script>-->
 <script>
 function toggler(divId) {
     $("#" + divId).toggle();
